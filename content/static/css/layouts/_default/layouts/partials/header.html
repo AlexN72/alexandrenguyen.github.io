@@ -1,0 +1,11 @@
+<div class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/">{{ .Site.Title }}</a>
+    <span class="badge">Cabinet • Coaching santé</span>
+    <nav class="menu">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</div>
