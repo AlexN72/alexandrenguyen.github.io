@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+<hr>
+<div class="grid">
+  {{ range .Paginator.Pages }}
+    <div class="card" style="grid-column: span 12;">
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <div class="post-meta">{{ .Date.Format "02.01.2006" }}</div>
+      <p>{{ .Plain | truncate 180 }}</p>
+    </div>
+  {{ end }}
+</div>
+{{ end }}
